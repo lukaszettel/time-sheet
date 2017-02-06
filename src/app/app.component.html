@@ -1,0 +1,33 @@
+<div>
+  <md-toolbar color="primary">
+    <span><md-icon>mood</md-icon></span>
+
+    <span>Time sheet</span>
+
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Settings</button>
+    <button md-menu-item>Option 2</button>
+  </md-menu>
+
+  <md-card>
+    <button md-raised-button color="primary">Start</button>
+    <button md-raised-button color="primary">End</button>
+    <button md-raised-button color="primary">Overview</button>
+  </md-card>
+
+  <ul class="timeStamps">
+    <li *ngFor="let timeStamp of timeStamps">
+      <span class="badge">{{timeStamp.id}}</span>{{TimeStamp.name}}
+    </li>
+  </ul>
+
+  <span class="done">
+    <button md-fab>
+      <md-icon>check circle</md-icon>
+    </button>
+  </span>
+</div>
